@@ -9,7 +9,7 @@ namespace StudentDiary
     class Diary
     {
         //Fields 
-        List<float> ratings;
+        List<float> ratings = new List<float>();
 
 
         //Methods
