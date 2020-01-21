@@ -8,8 +8,14 @@ namespace StudentDiary
 {
     class Diary
     {
+
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
+
         //Fields 
-        List<float> ratings = new List<float>();
+        List<float> ratings;
 
 
         //Methods
