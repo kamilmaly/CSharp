@@ -14,11 +14,15 @@ namespace ExerciseProject
             diary.AddRating(3);
             diary.AddRating(5);
 
-            Diary diary2 = diary;
-            diary2.AddRating(8);
+            DiaryStatistics stats = diary.ComputeStatistics();
+            Console.WriteLine("avg: " + stats.averageGrade + "\nmax rating: " + stats.maxGrade + "\nmin rating " + stats.minGrade) ;
 
-            Diary diary3 = diary2;
-            diary3.AddRating(1);
+            Console.ReadKey();
+            //Diary diary2 = diary;
+            //diary2.AddRating(8);
+
+            //Diary diary3 = diary2;
+            //diary3.AddRating(1);
 
         }
     }

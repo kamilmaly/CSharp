@@ -24,25 +24,20 @@ namespace ExerciseProject
             ratings.Add(rating);
         }
 
-        public float CalculateAverage()
+        internal DiaryStatistics ComputeStatistics()
         {
-            float sum = 0, avg = 0;
+            DiaryStatistics stats = new DiaryStatistics();
+
+            float sum = 0f;
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
-            avg = sum / ratings.Count();
-            return avg;
-        }
+            stats.averageGrade = sum / ratings.Count();
+            stats.maxGrade = ratings.Max();
+            stats.minGrade = ratings.Min();
 
-        public float GiveMaxRating()
-        {
-            return ratings.Max();
-        }
-
-        public float GiveMinRating()
-        {
-            return ratings.Min();
+            return stats;
         }
     }
 }

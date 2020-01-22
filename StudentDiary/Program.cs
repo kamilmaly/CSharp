@@ -11,7 +11,7 @@ namespace StudentDiary
         static void Main(string[] args)
         {
         Diary diary = new Diary();
-           
+
             for (; ; )
             {
                 Console.WriteLine("Enter rating from 1 to 10");
